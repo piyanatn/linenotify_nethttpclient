@@ -2,8 +2,8 @@ object Form9: TForm9
   Left = 0
   Top = 0
   Caption = 'Notify'
-  ClientHeight = 176
-  ClientWidth = 736
+  ClientHeight = 133
+  ClientWidth = 622
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -59,7 +59,7 @@ object Form9: TForm9
     TabOrder = 2
     OnClick = BtnSendClick
   end
-  object Edit1: TEdit
+  object ImagePath: TEdit
     Left = 168
     Top = 88
     Width = 345
@@ -74,14 +74,14 @@ object Form9: TForm9
     HandleRedirects = True
     AllowCookies = True
     UserAgent = 'Embarcadero URI Client/1.0'
-    Left = 400
-    Top = 16
+    Left = 376
+    Top = 24
   end
   object NetHTTPRequest1: TNetHTTPRequest
     Asynchronous = False
     ConnectionTimeout = 60000
     ResponseTimeout = 60000
-    Left = 504
-    Top = 16
+    Left = 344
+    Top = 24
   end
 end

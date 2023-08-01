@@ -17,8 +17,8 @@ type
     TxtMessage: TEdit;
     BtnSend: TButton;
     Label3: TLabel;
-    Edit1: TEdit;
-    procedure LineSendCustomNotify(msg: RawByteString;token: String);
+    ImagePath: TEdit;
+    procedure LineSendCustomNotify(msg: RawByteString;token: String;ImagePath :String);
     procedure BtnSendClick(Sender: TObject);
   private
     { Private declarations }
@@ -39,10 +39,10 @@ implementation
 
 procedure TForm9.BtnSendClick(Sender: TObject);
 begin
-   LineSendCustomNotify(TxtMessage.Text,TxtToken.Text);
+   LineSendCustomNotify(TxtMessage.Text,TxtToken.Text,ImagePath.Text);
 end;
 
-procedure TForm9.LineSendCustomNotify(msg: RawByteString; token: String);
+procedure TForm9.LineSendCustomNotify(msg: RawByteString; token: String;ImagePath :  String);
 Var
    NetHTTPFormData : TMultipartFormData;
 
@@ -55,7 +55,7 @@ begin
 
         NetHTTPFormData := TMultipartFormData.Create();
         NetHTTPFormData.AddField('message',msg);
-        NetHTTPFormData.AddFile('imageFile',Edit1.Text);
+        NetHTTPFormData.AddFile('imageFile',ImagePath);
 
         NetHTTPClient1 := TNetHTTPClient.Create(nil);
         NetHTTPRequest1 := TNetHTTPRequest.Create(nil);
