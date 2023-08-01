@@ -2,8 +2,8 @@ object Form9: TForm9
   Left = 0
   Top = 0
   Caption = 'Notify'
-  ClientHeight = 132
-  ClientWidth = 564
+  ClientHeight = 176
+  ClientWidth = 736
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -27,15 +27,23 @@ object Form9: TForm9
     Height = 13
     Caption = 'Message'
   end
+  object Label3: TLabel
+    Left = 48
+    Top = 91
+    Width = 99
+    Height = 13
+    Caption = 'Thumbnail 240 X 240'
+  end
   object TxtToken: TEdit
-    Left = 112
+    Left = 168
     Top = 29
     Width = 417
     Height = 21
     TabOrder = 0
+    Text = 'eZU3kc7SYFrHY1Olv9AmiSYqPXVEi8gGUoDdlpAR6AQ'
   end
   object TxtMessage: TEdit
-    Left = 112
+    Left = 168
     Top = 61
     Width = 345
     Height = 21
@@ -43,13 +51,21 @@ object Form9: TForm9
     Text = #3626#3623#3633#3626#3604#3637' Delphi XE10.3 NetClient'
   end
   object BtnSend: TButton
-    Left = 463
+    Left = 519
     Top = 56
     Width = 75
     Height = 33
     Caption = 'Send'
     TabOrder = 2
     OnClick = BtnSendClick
+  end
+  object Edit1: TEdit
+    Left = 168
+    Top = 88
+    Width = 345
+    Height = 21
+    TabOrder = 3
+    Text = 'C:\Users\farmo\Pictures\Cat03.jpg'
   end
   object NetHTTPClient1: TNetHTTPClient
     Asynchronous = False
@@ -58,14 +74,14 @@ object Form9: TForm9
     HandleRedirects = True
     AllowCookies = True
     UserAgent = 'Embarcadero URI Client/1.0'
-    Left = 344
+    Left = 400
     Top = 16
   end
   object NetHTTPRequest1: TNetHTTPRequest
     Asynchronous = False
     ConnectionTimeout = 60000
     ResponseTimeout = 60000
-    Left = 392
+    Left = 504
     Top = 16
   end
 end
